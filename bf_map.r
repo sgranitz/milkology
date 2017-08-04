@@ -23,7 +23,7 @@ us_map <- fortify(us, region="name")
 
 bf_data <- read_csv("C:/Users/Stephan/Desktop/cdc_bf_data.csv")
 bf_data <- bf_data %>% 
-  mutate(grp = ifelse(exc_bf_6mth > 15, ifelse(exc_bf_6mth > 25.5, ">25.5", "15-25.5"), "<15"))
+  mutate(grp = ifelse(exc_bf_6mth > 15, ifelse(exc_bf_6mth >= 25.5, "c. >=25.5%", "b. 15-25.5%"), "a. <15%"))
 bf_data$grp <- as.factor(bf_data$grp)
 
 bf_data$name <- bf_data$state
