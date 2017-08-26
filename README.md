@@ -1,2 +1,2 @@
-# milkology
-Projects for thisismilkology.com
+# milksource
+Projects for http://themilksource.com/
