@@ -1,4 +1,4 @@
-# Made for thisismilkology.com
+# Made for http://themilksource.com/
 
 # Map using CDC data for Exclusive Breastfeeding at 6 months by state
 # CDC data: https://www.cdc.gov/breastfeeding/pdf/2016breastfeedingreportcard.pdf
@@ -21,7 +21,7 @@ library(scales)
 us <- usa_composite()
 us_map <- fortify(us, region="name")
 
-url <- "https://raw.githubusercontent.com/sgranitz/milkology/master/cdc_bf_data.csv"
+url <- "https://raw.githubusercontent.com/sgranitz/milksource/master/cdc_bf_data.csv"
 bf_data <- as_tibble(read.csv(url, fileEncoding = "UTF-8-BOM"))
 
 bf_data <- bf_data %>% 
